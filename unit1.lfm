@@ -1,0 +1,273 @@
+object Form1: TForm1
+  Left = 616
+  Height = 683
+  Top = 79
+  Width = 1129
+  Caption = 'Form1'
+  ClientHeight = 683
+  ClientWidth = 1129
+  Menu = MainMenu1
+  PopupMode = pmAuto
+  LCLVersion = '4.8.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 18
+    Top = 665
+    Width = 1129
+    Panels = <>
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 52
+    Top = 0
+    Width = 1129
+    ButtonHeight = 48
+    ButtonWidth = 48
+    Caption = 'ToolBar1'
+    TabOrder = 1
+    object ThumbnailsOnOff: TSpeedButton
+      Left = 1
+      Height = 48
+      Top = 2
+      Width = 66
+      OnClick = ThumbnailsOnOffClick
+    end
+    object OrderByNameAscDesc: TSpeedButton
+      Left = 265
+      Height = 48
+      Top = 2
+      Width = 66
+    end
+    object OrderByDateAscDesc: TSpeedButton
+      Left = 199
+      Height = 48
+      Top = 2
+      Width = 66
+    end
+    object Print: TSpeedButton
+      Left = 133
+      Height = 48
+      Top = 2
+      Width = 66
+      OnClick = PrintClick
+    end
+    object FoldersTreeOnOff: TSpeedButton
+      Left = 67
+      Height = 48
+      Top = 2
+      Width = 66
+      OnClick = FoldersTreeOnOffClick
+    end
+    object RotateLeft: TSpeedButton
+      Left = 516
+      Height = 48
+      Top = 2
+      Width = 66
+    end
+    object RotateRight: TSpeedButton
+      Left = 582
+      Height = 48
+      Top = 2
+      Width = 66
+    end
+    object ExifOnOff: TSpeedButton
+      Left = 648
+      Height = 48
+      Top = 2
+      Width = 66
+    end
+    object Panel1: TPanel
+      Left = 331
+      Height = 48
+      Top = 2
+      Width = 185
+      ClientHeight = 48
+      ClientWidth = 185
+      TabOrder = 0
+      object TrackBar1: TTrackBar
+        Left = 1
+        Height = 37
+        Top = 10
+        Width = 183
+        Position = 0
+        Align = alBottom
+        TabOrder = 0
+      end
+      object Label3: TLabel
+        Left = 90
+        Height = 16
+        Top = 0
+        Width = 35
+        Caption = 'Zoom'
+      end
+    end
+  end
+  object FoldersTree: TPanel
+    Left = 0
+    Height = 468
+    Top = 52
+    Width = 321
+    Align = alLeft
+    ClientHeight = 468
+    ClientWidth = 321
+    TabOrder = 2
+    object LazVirtualStringTree1: TLazVirtualStringTree
+      Left = 1
+      Height = 450
+      Top = 17
+      Width = 319
+      Align = alClient
+      DefaultText = 'Node'
+      Header.AutoSizeIndex = 0
+      Header.Columns = <>
+      Header.MainColumn = -1
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 1
+      Height = 16
+      Top = 1
+      Width = 319
+      Align = alTop
+      Caption = 'Folder Tree'
+    end
+  end
+  object Thumbnail: TPanel
+    Left = 0
+    Height = 136
+    Top = 529
+    Width = 1129
+    Align = alBottom
+    ClientHeight = 136
+    ClientWidth = 1129
+    TabOrder = 3
+    OnResize = ThumbnailResize
+    object ProgressBar1: TProgressBar
+      Left = 1
+      Height = 20
+      Top = 115
+      Width = 1127
+      Align = alBottom
+      TabOrder = 0
+    end
+    object ThumbnailsScrollbar: TTrackBar
+      Left = 1098
+      Height = 114
+      Top = 1
+      Width = 30
+      Orientation = trVertical
+      Position = 0
+      Align = alRight
+      TabOrder = 1
+    end
+  end
+  object Metadata: TPanel
+    Left = 862
+    Height = 468
+    Top = 52
+    Width = 267
+    Align = alRight
+    ClientHeight = 468
+    ClientWidth = 267
+    TabOrder = 4
+    OnResize = MetadataResize
+    object Label1: TLabel
+      Left = 1
+      Height = 16
+      Top = 1
+      Width = 265
+      Align = alTop
+      Caption = 'Exif Data'
+    end
+    object TrackBar2: TTrackBar
+      Left = 236
+      Height = 450
+      Top = 17
+      Width = 30
+      Orientation = trVertical
+      Position = 0
+      Align = alRight
+      TabOrder = 0
+    end
+    object ExifScrollBox: TScrollBox
+      Left = 1
+      Height = 450
+      Top = 17
+      Width = 235
+      HorzScrollBar.Page = 1
+      VertScrollBar.Page = 1
+      Align = alClient
+      TabOrder = 1
+    end
+  end
+  object Image: TPanel
+    Left = 329
+    Height = 468
+    Top = 52
+    Width = 525
+    Align = alClient
+    TabOrder = 5
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 9
+    Top = 520
+    Width = 1129
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object Splitter2: TSplitter
+    Left = 321
+    Height = 468
+    Top = 52
+    Width = 8
+  end
+  object Splitter3: TSplitter
+    Left = 854
+    Height = 468
+    Top = 52
+    Width = 8
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object MainMenu1: TMainMenu
+    Left = 488
+    Top = 182
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object MenuItem2: TMenuItem
+        Caption = 'Open'
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Open Folder'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Save'
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Transcode...'
+      end
+      object MenuItemPrint: TMenuItem
+        Caption = 'Print...'
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Exit'
+      end
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Edit'
+      object MenuItem8: TMenuItem
+        Caption = 'Copy'
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Send to Bin (Canc)'
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Delete from disk (Shift+Canc)'
+      end
+    end
+  end
+end

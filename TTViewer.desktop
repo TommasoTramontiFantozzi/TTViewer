@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=TTViewer
+GenericName=Image Viewer
+Comment=Fast image viewer with thumbnails, EXIF, lossless JPEG rotation, transcoding and print layout
+Exec=/home/tommaso/Desktop/TTViewer/TTViewer %f
+Path=/home/tommaso/Desktop/TTViewer
+Icon=/home/tommaso/Desktop/TTViewer/TTViewer.ico
+Terminal=false
+Categories=Graphics;Viewer;
+StartupNotify=false
+MimeType=image/jpeg;image/png;image/gif;image/bmp;image/tiff;image/webp;image/x-icon;image/vnd.microsoft.icon;image/svg+xml;image/heif;image/heic;image/avif;image/jxl;
+Keywords=image;photo;viewer;jpeg;exif;thumbnails;
